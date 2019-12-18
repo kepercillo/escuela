@@ -19,6 +19,7 @@ class CreateAlumnosTable extends Migration
             $table->char('apellidos', 50);
             $table->smallInteger('grado_id')->unsigned();
             $table->foreign('grado_id')->references('id')->on('grados');
+            $table->softDeletes();
            // $table->smallIncrements('materia_id')-unsigned();
             //$table->foreign('materia_id')->references('id')->on('materias');
 

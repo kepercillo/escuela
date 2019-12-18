@@ -16,6 +16,7 @@ class CreateMateriasTable extends Migration
         Schema::create('materias', function (Blueprint $table) {
             $table->smallIncrements('id')->unsigned();
             $table->string('nombre', 20);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

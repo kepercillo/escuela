@@ -17,6 +17,7 @@ class CreateMaestrosTable extends Migration
             $table->smallIncrements('id')->unsigned();
             $table->char('nombres', 50);
             $table->char('apellidos', 50);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

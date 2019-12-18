@@ -5,7 +5,7 @@
          <table class="table table-condensed table-striped table-bordered">
            <thead>
                <tr>
-                 <th>ID</th>
+                <th>Id</th>
                  <th>Nombre</th>
                  <th>Borrar</th>
                  <th>Editar</th>
@@ -25,4 +25,5 @@
            </tbody>
           </table>
       </div>
+      {{ $materias->links() }}
  </div>

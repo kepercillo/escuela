@@ -32,5 +32,15 @@ class MateriasController extends Controller
         $materia->save();
         return redirect ('materias');
     }
+    public function show($id)
+    {
+        $materias = Materia::where('id',$id)->first();
+        if (is_null ($materias))
+        {
+        App::abort(404);
+        }
 
+        return view('editar', ['materias' => $materias]);
+    }
+   
 }

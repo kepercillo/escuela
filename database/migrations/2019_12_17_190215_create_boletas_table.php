@@ -16,6 +16,7 @@ class CreateBoletasTable extends Migration
         Schema::create('boletas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
