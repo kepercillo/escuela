@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableParciales extends Migration
+class CreateParcialesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateTableParciales extends Migration
      */
     public function up()
     {
-        Schema::create('table_parciales', function (Blueprint $table) {
+        Schema::create('parciales', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateTableParciales extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_parciales');
+        Schema::dropIfExists('parciales');
     }
 }

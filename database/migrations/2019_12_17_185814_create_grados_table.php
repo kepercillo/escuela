@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableMestros extends Migration
+class CreateGradosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateTableMestros extends Migration
      */
     public function up()
     {
-        Schema::create('table_mestros', function (Blueprint $table) {
+        Schema::create('grados', function (Blueprint $table) {
             $table->smallIncrements('id')->unsigned();
-            $table->char(nombre,50);
-            $table->char(apellidos, 50);
+            $table->string('nombre', 20);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateTableMestros extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_mestros');
+        Schema::dropIfExists('grados');
     }
 }

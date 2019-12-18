@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/alumnonuevo', function() {
+    return view('alumnonuevo');
+});
+
+route::ApiResource('/materia', 'MateriasController');
+Route::ApiResource('/alumno', 'AlumnosController');
+Route::get('/materia/delete/{id}', ['as' => 'materia/delete', 'uses' => 'MateriasController@destroy']);
+Route::get('/materia/editar/{id}', ['as' => 'materia/editar', 'uses' => 'MateriasController@update']);
+//route::ApiResource('alumnonuevo', 'alumnonuevo')
+

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableMaterias extends Migration
+class CreateBoletasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateTableMaterias extends Migration
      */
     public function up()
     {
-        Schema::create('table_materias', function (Blueprint $table) {
-            $table->smallIncrements('id')->unsigned();
-            $table->char('nombre', 20);
+        Schema::create('boletas', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateTableMaterias extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_materias');
+        Schema::dropIfExists('boletas');
     }
 }
