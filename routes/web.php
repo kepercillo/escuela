@@ -19,7 +19,8 @@ Route::get('/alumnonuevo', function() {
 });
 
 route::ApiResource('/materias', 'MateriasController');
-Route::ApiResource('/alumno', 'AlumnosController');
+route::ApiResource('/maestros', 'MaestrosController');
+Route::ApiResource('/alumnos', 'AlumnosController');
 Route::get('/materia/delete/{id}', ['as' => 'materia/delete', 'uses' => 'MateriasController@destroy']);
 Route::get('/materia/editar/{id}', ['as' => 'materia/editar', 'uses' => 'MateriasController@show']);
 Route::post('/materias/guardar/{id}', 'MateriasController@update');

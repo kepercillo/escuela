@@ -14,8 +14,7 @@ class MateriasController extends Controller
     {
     $materias = Materia::paginate(3);
     return view('materias', ['materias' => $materias]);
-    //$alumnos=Alumno::all();    consulta para la lista de alumnos
-    //dd($alumnos); // VISTA EN ARRAYS
+   
     }
 
     public function destroy($id)
